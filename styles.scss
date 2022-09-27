@@ -4,7 +4,7 @@ body {
 }
 .container {
   background-color: white;
-  width: 500px;
+  width: 550px;
   margin: 100px auto 0 auto;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -15,7 +15,7 @@ body {
   header {
     text-align: center;
     h1 {
-      margin: 0;
+      margin: 0 0 15px 0;
       letter-spacing: 3px;
     }
   }
@@ -24,11 +24,54 @@ body {
       height: 30px;
       width: 85%;
       margin: 0 auto;
-      background-color: aqua;
+      box-sizing: border-box;
+      form {
+        display: flex;
+      }
+      #addInput {
+        width: 85%;
+        height: 30px;
+        border: none;
+        padding: 0 0 0 5px;
+        outline: none;
+        background-color: rgba(0, 0, 255, 0.158);
+        border-radius: 10px 0 0 10px;
+      }
+      #addBtn {
+        background-color: rgba(0, 0, 255, 0.349);
+        border: none;
+        width: 15%;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+      }
     }
-    section {
-      min-height: 120px;
-      background-color: blue;
+    .tasks {
+      min-height: 20px;
+      .tasksDiv {
+        height: 30px;
+        margin: 0 auto;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .taskTitle {
+          font-size: 14px;
+          font-weight: lighter;
+        }
+        .buttons {
+          width: 45px;
+          display: flex;
+          justify-content: space-between;
+          .editBtn,
+          .deleteBtn {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
   footer {
@@ -40,6 +83,7 @@ body {
       border: none;
       letter-spacing: 3px;
       color: red;
+      cursor: pointer;
     }
   }
 }

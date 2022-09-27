@@ -13,11 +13,20 @@
         <h1>Grocery Bud</h1>
       </header>
       <main>
-        <article></article>
-        <section></section>
+        <article>
+          <form action="">
+            <input id="addInput" type="text" maxlength="50" />
+            <button type="button" id="addBtn" onclick="addTaskToArray()">
+              Add
+            </button>
+          </form>
+        </article>
+        <section class="tasks"></section>
       </main>
       <footer>
-        <button type="reset" id="clearBtn"><b>Clear items</b></button>
+        <button type="reset" id="clearBtn">
+          <b>Clear items</b>
+        </button>
       </footer>
     </div>
   </body>

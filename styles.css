@@ -5,7 +5,7 @@ body {
 
 .container {
   background-color: white;
-  width: 500px;
+  width: 550px;
   margin: 100px auto 0 auto;
   -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
@@ -26,18 +26,74 @@ body {
   text-align: center;
 }
 .container header h1 {
-  margin: 0;
+  margin: 0 0 15px 0;
   letter-spacing: 3px;
 }
 .container main article {
   height: 30px;
   width: 85%;
   margin: 0 auto;
-  background-color: aqua;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.container main section {
-  min-height: 120px;
-  background-color: blue;
+.container main article form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.container main article #addInput {
+  width: 85%;
+  height: 30px;
+  border: none;
+  padding: 0 0 0 5px;
+  outline: none;
+  background-color: rgba(0, 0, 255, 0.158);
+  border-radius: 10px 0 0 10px;
+}
+.container main article #addBtn {
+  background-color: rgba(0, 0, 255, 0.349);
+  border: none;
+  width: 15%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+.container main .tasks {
+  min-height: 20px;
+}
+.container main .tasks .tasksDiv {
+  height: 30px;
+  margin: 0 auto;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container main .tasks .tasksDiv .taskTitle {
+  font-size: 14px;
+  font-weight: lighter;
+}
+.container main .tasks .tasksDiv .buttons {
+  width: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container main .tasks .tasksDiv .buttons .editBtn,
+.container main .tasks .tasksDiv .buttons .deleteBtn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 .container footer {
   height: 40px;
@@ -53,4 +109,5 @@ body {
   border: none;
   letter-spacing: 3px;
   color: red;
+  cursor: pointer;
 }
