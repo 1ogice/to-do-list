@@ -64,9 +64,17 @@ function addTaskToPageFrom(list) {
     editBtn.className = "editBtn";
     editBtn.src = "./icons/edit.png";
     editBtn.onclick = () => {
-      // addInput.value = taskTitle.innerHTML;
-      // addBtn.innerHTML = "Edit";
-      taskTitle.innerHTML = "test";
+      addInput.value = task.title;
+      addBtn.innerHTML = "Edit";
+      addBtn.onclick = () => {
+        taskTitle.innerHTML = addInput.value;
+        task.title = taskTitle.innerHTML;
+        addBtn.innerHTML = "Add";
+        addInput.value = "";
+        addBtn.onclick = () => {
+          addTaskToArray();
+        };
+      };
     };
 
     let deleteBtn = document.createElement("img");
